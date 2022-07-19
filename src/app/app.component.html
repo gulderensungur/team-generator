@@ -1,0 +1,56 @@
+<div class="vertical-center">
+  <div class="container-sm">
+    <div class="row">
+      <div class="col">
+        <div class="header">
+          <h1>Team Generator</h1>
+        </div>
+        <div class="member-list">
+          <ul class="name-list">
+            <li *ngFor="let member of memberList">{{ member }}</li>
+          </ul>
+        </div>
+        <form class="example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input
+              matInput
+              placeholder="Enter a name"
+              name="memberName"
+              [(ngModel)]="memberName"
+              autocomplete="off"
+              value="memberName"
+            />
+          </mat-form-field>
+        </form>
+        <div class="action">
+          <button mat-raised-button color="warn" (click)="addMember()">
+            Add
+          </button>
+        </div>
+        <mat-form-field>
+          <mat-placeholder># of teams</mat-placeholder>
+          <input
+            matInput
+            type="number"
+            autocomplete="off"
+            value="numberOfTeams"
+            [(ngModel)]="numberOfTeams"
+          />
+          <button
+            mat-raised-button
+            color="primary"
+            mat-button
+            matSuffix
+            mat-stroked-button
+            aria-label="Generate"
+            (click)="generateTeams()"
+          >
+            Generate
+          </button>
+        </mat-form-field>
+        <p class="error-msg" *ngIf="errorMessage">{{ errorMessage }}</p>
+      </div>
+    </div>
+  </div>
+</div>

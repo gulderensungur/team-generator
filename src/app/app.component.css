@@ -1,0 +1,51 @@
+.vertical-center {
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container-sm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row {
+  border: 2px solid gainsboro;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+h1 {
+  font-size: 2.5rem;
+}
+.header {
+  padding: 1rem;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.name-list {
+  list-style: none;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+  padding: 12px;
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+}
+mat-form-field.mat-form-field {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.error-msg {
+  color: red;
+}
